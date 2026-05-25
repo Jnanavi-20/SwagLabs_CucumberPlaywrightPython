@@ -55,9 +55,9 @@ def step_enter_credentials(context):
        
        print("Current URL:", context.page.url)
        assert context.login.is_dashboard_visible()
-
+       print ("on success : " , data )
       else:
 
        error = context.login.get_error_message()
        assert data["result"] in error
-       
+       print ("On Error :" , data )
